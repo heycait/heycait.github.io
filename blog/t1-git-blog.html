@@ -67,7 +67,21 @@
       "The path is the search path for commands. It is a colon-separated list of directories in which the shell looks for commands (see COMMAND EXECUTION below). A zero-length (null) directory name in the value of PATH indicates the current directory. A null directory name may appear as two adjacent colons, or as an initial or trailing colon. The default path is system-dependent, and is set by the administrator who installs bash. A common value is /usr/gnu/bin:/usr/local/bin:/usr/ucb:/bin:/usr/bin' "
     </p>
 
+    <p><b> Cheat Sheet:</b></p>
     <p>
+      echo $SHELL #check default shell
+    </p>
+
+    <p>
+      ls -a #list all files including hidden ones
+    </p>
+
+    <p>
+       export PATH=/path/to/location:$PATH   OR    export PATH=$PATH:/new_path_entry  #use to change path and restart terminal to take effect
+    </p>
+
+    <p>
+      echo PATH $check the path and ensure it changed
     </p>
 
   </section>
