@@ -1,0 +1,32 @@
+html {
+  font-family: Arial;
+}
+
+.heading {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 0em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+.center {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.text_center {
+  text-align: center;
+  line-height: 0em;
+}
+
+#feature_img {
+  display: block;
+  max-width: 70%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
