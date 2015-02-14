@@ -31,33 +31,35 @@ nav ul {
   overflow: hidden;
   height: 150px;
   width: 150px;
-  border: 1px solid black;
+
 }
 
 #blurb {
   display: inline-block;
   width: 18%;
-  background-color: black;
-  color: white;
+  background-color: #A8C8F0;
+  color: black;
   text-align: center;
   padding-bottom: 1em;
   padding-top: 1em;
   float: left;
+  border: 0.2em solid #ddd;
 }
 
 
 #feature_item {
   display: inline-block;
-  background-color: black;
-  color: white;
+  background-color: #A8C8F0;
+  color: black;
   text-align: center;
   width: 20%;
   padding: 0.5em;
   float: right;
+  border: 0.2em solid #ddd;
 }
 
 #feature_item a{
-  color: white;
+  color: black;
 }
 
 li a {
