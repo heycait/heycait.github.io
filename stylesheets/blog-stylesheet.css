@@ -1,7 +1,95 @@
 html {
-  font-family: Arial;
-  background-color: #E8F8FA;
+  font-family: Verdana;
+  background-color: #f7f7f7;
+}
 
+nav ul {
+  list-style-type: none;
+  padding: 1em;
+  background-color: black;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  margin: 0;
+}
+
+#feature_img {
+  display: block;
+  width: 50%;
+  height: 20%;
+  overflow: hidden;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+#avatar {
+  border-radius: 3%;
+  display: inline-block;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+}
+
+#blurb {
+  display: inline-block;
+  width: 18%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  float: left;
+}
+
+
+#feature_item {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  width: 20%;
+  padding: 0.5em;
+  float: right;
+}
+
+#feature_item a{
+  color: white;
+}
+
+li a {
+  color: white;
+}
+
+ul li {
+  display: inline;
+  margin: 0.5em;
+  text-decoration: none;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 3em;
+  background-color: black;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.main_section {
+  display: block;
+  margin: auto;
+  margin-top: 4em;
+  width: 50%;
+  background-color: white;
+  top: 3em;
+  padding: 0.5em;
+  border: 0.1em solid #ddd;
+  overflow: hidden;
 }
 
 .heading {
@@ -10,14 +98,7 @@ html {
   line-height: 0em;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
-  background-color: #b3afaf;
-}
-
-.center {
-  display: block;
-  margin: auto;
-  width: 50%;
-  background-color: #E8F8FA;
+  background-color: white;
 }
 
 .text_center {
@@ -25,16 +106,18 @@ html {
   line-height: 0.5em;
 }
 
-#feature_img {
+#header_img {
   display: block;
-  max-width: 50%;
-  height: auto;
-  overflow: hidden;
+  width: 100%;
+  height: 20%;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-
+  top: 0;
+  left: 0;
+  overflow: hidden;
 }
+
+
+
 
 img {
   display: block;
