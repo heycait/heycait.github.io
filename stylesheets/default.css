@@ -1,0 +1,99 @@
+html {
+  font-family: Verdana;
+  background-color: #f7f7f7;
+}
+
+nav ul {
+  list-style-type: none;
+  background-color: rgba(0,0,0,.2);
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  margin: 0em;
+  padding: 1em;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+/* #8A8A8A */
+
+nav ul li {
+  display: inline;
+  margin: 0.5em;
+  font-size: 1.5em;
+}
+
+nav ul li a {
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #51268d;
+  padding: 1em;
+}
+
+footer {
+  text-align: center;
+  font-size: 1em;
+  position: fixed;
+  bottom: 0;
+  left: 45%;
+}
+
+footer div span {
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+#avatar {
+  display: inline-block;
+  height: 14em;
+  width: 14em;
+}
+
+#blurb {
+  display: inline-block;
+  width: 18%;
+  background-color: white;
+  color: #51268d;
+  text-align: center;
+  padding-bottom: 0.3em;
+  padding-top: 0em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  float: left;
+  border: 0.2em solid #ddd;
+  position: relative;
+  top: 4em;
+}
+
+.handwritten {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5em;
+}
+
+#about {
+  background-color: white;
+  padding: 0.5em;
+  width: 75%;
+  position: relative;
+  top: 5em;
+  left: 16em;
+  text-align: center;
+  color: #51268d;
+  border: 1px solid #ddd;
+}
+
+section div img {
+  position: relative;
+  top: 6em;
+  left: 10em;
+  margin-bottom: 1em;
+}
+
+.black_text {
+  color: black;
+}
