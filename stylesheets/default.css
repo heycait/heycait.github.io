@@ -75,11 +75,12 @@ footer div span {
   font-size: 1.5em;
 }
 
+
 #about {
   background-color: white;
   padding: 0.5em;
   width: 75%;
-  position: relative;
+  position: absolute;
   top: 5em;
   left: 16em;
   text-align: center;
@@ -87,10 +88,17 @@ footer div span {
   border: 1px solid #ddd;
 }
 
-section div img {
-  position: relative;
-  top: 6em;
-  left: 10em;
+#blog_banner1 {
+  position: absolute;
+  top: 16em;
+  left: 24em;
+  margin-bottom: 1em;
+}
+
+#blog_banner2 {
+  position: absolute;
+  top: 32em;
+  left: 24em;
   margin-bottom: 1em;
 }
 
