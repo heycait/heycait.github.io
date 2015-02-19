@@ -1,45 +1,16 @@
 body {
-  width: 100%;
-  background-color: #f7f7f7;
+  border-radius: 0%;
 }
 
-section {
-  display: inline-block;
-  position: relative;
-  left: 17%;
-  width: 25%;
-  height: 15em;
-  background-color: white;
-  border-radius: 5%;
-  padding: 0.2em 1.5em 0.5em 1.5em;
-  margin: 1em;
+img {
+  display: block;
 }
 
-#section2 {
-  position: relative;
-  top: -0.5em;
-}
-section h2 {
-  color: black;
-}
-
-section ul {
-  list-style-type: none;
+.code_block {
+  display: block;
+  font-family: "Courier New";
+  font-weight: bold;
+  background-color: #cccccc ;
+  width: auto;
 }
 
-ul li {
-  margin: 0.5em;
-}
-
-li a {
-  text-decoration: none;
-  color: purple;
-}
-
-li a:hover {
-  color: red;
-}
-
-li span {
-  font-size: 0.8em;
-}

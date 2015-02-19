@@ -38,7 +38,7 @@ nav ul li a:hover {
   color: white;
 }
 
-img {
+#avatar {
   display: inline;
   float: left;
   margin: 1em 1em 0em 1em;
