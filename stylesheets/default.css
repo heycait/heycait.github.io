@@ -1,30 +1,34 @@
 html {
-  font-family: Verdana;
+  font-family: 'Montserrat', sans-serif;
   background-color: #f7f7f7;
+  color: #281a8d;
+}
+
+.black {
+  color: black;
 }
 
 nav ul {
   list-style-type: none;
-  background-color: rgba(0,0,0,.2);
+  /*background-color: rgba(0,0,0,.2);*/
+  opacity: 1;
+  background-color: #064c04;
   text-align: center;
-  font-weight: bold;
-  position: absolute;
+  position: fixed;
   margin: 0em;
-  padding: 1em;
+  padding: 2em;
   width: 100%;
   left: 0;
   top: 0;
+
 }
-/* #8A8A8A */
 
 nav ul li {
   display: inline;
-  margin: 0.5em;
-  font-size: 1.5em;
+  padding: 1.5em;
 }
 
 nav ul li a {
-  font-family: 'Oswald', sans-serif;
   text-decoration: none;
   color: white;
 }
@@ -32,76 +36,73 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: none;
   color: white;
-  background-color: #51268d;
-  padding: 1em;
 }
 
-footer {
-  text-align: center;
-  font-size: 1em;
+img {
+  display: inline;
+  float: left;
+  margin: 1em 1em 0em 1em;
+  width: 150px;
+  height: 170px;
+}
+
+body {
+  border-radius: 5%;
+  width: 50%;
+  background-color: white;
+  position: relative;
+  top: 8em;
+  margin: 0 auto 0 auto;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+body div p {
+  font-size: 1.35em;
+}
+
+#name {
+  text-align: right;
+  padding-right: 5em;
+  font-family: 'Homemade Apple', cursive;
+  color: purple;
+}
+
+
+footer p {
   position: fixed;
   bottom: 0;
-  left: 45%;
-}
-
-footer div span {
-  font-family: 'Cedarville Cursive', cursive;
-}
-
-#avatar {
-  display: inline-block;
-  height: 14em;
-  width: 14em;
-}
-
-#blurb {
-  display: inline-block;
-  width: 18%;
-  background-color: white;
-  color: #51268d;
+  left: 48%;
+  color: white;
+  font-size: 0.7em;
   text-align: center;
-  padding-bottom: 0.3em;
-  padding-top: 0em;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  float: left;
-  border: 0.2em solid #ddd;
-  position: relative;
-  top: 4em;
 }
 
-.handwritten {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 1.5em;
-}
-
-
-#about {
-  background-color: white;
-  padding: 0.5em;
-  width: 75%;
-  position: absolute;
-  top: 5em;
-  left: 16em;
+footer ul {
+  list-style-type: none;
+  /*background-color: rgba(0,0,0,.2);*/
+  background-color: #064c04;
   text-align: center;
-  color: #51268d;
-  border: 1px solid #ddd;
+  position: fixed;
+  margin: 0em;
+  padding-top: 0.7em;
+  padding-bottom: 2em;
+  width: 100%;
+  left: 0;
+  bottom: 0;
 }
 
-#blog_banner1 {
-  position: absolute;
-  top: 16em;
-  left: 24em;
-  margin-bottom: 1em;
+footer ul li {
+  display: inline;
+  margin: 0 0.5em 0 0;
 }
 
-#blog_banner2 {
-  position: absolute;
-  top: 32em;
-  left: 24em;
-  margin-bottom: 1em;
+footer ul li a {
+  text-decoration: none;
+  color: white;
 }
 
-.black_text {
-  color: black;
+footer span {
+  font-family: 'Homemade Apple', cursive;
 }
+
+
