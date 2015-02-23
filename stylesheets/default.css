@@ -10,7 +10,6 @@ html {
 
 nav ul {
   list-style-type: none;
-  /*background-color: rgba(0,0,0,.2);*/
   opacity: 1;
   background-color: #064c04;
   text-align: center;
@@ -18,9 +17,8 @@ nav ul {
   margin: 0em;
   padding: 2em;
   width: 100%;
-  left: 0;
+  right: 0;
   top: 0;
-
 }
 
 nav ul li {
@@ -52,8 +50,8 @@ body {
   background-color: white;
   position: relative;
   top: 8em;
-  margin: 0 auto 0 auto;
-  padding: 0.5em 1em 0.5em 1em;
+  margin: 0 auto 8em auto;
+  padding: 0.5em 0.5em 0.5em 1.5em;
 }
 
 body div p {
