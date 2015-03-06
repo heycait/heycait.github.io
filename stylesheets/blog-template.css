@@ -14,3 +14,20 @@ img {
   width: auto;
 }
 
+b {
+  color: black;
+  font-size: 1.2em;
+}
+
+h1 {
+  color: black;
+}
+
+h3 {
+  color: black;
+  text-align: center;
+}
+
+h4 {
+  color: black;
+}
