@@ -12,18 +12,19 @@ nav ul {
   list-style-type: none;
   opacity: 1;
   background-color: #064c04;
-  text-align: center;
+  text-align: left;
   position: fixed;
   margin: 0em;
-  padding: 2em;
+  padding: 0.5em;
   width: 100%;
   right: 0;
   top: 0;
 }
 
+
 nav ul li {
   display: inline;
-  padding: 1.5em;
+  padding: 0.5em;
 }
 
 nav ul li a {
