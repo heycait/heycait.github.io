@@ -1,0 +1,26 @@
+#body {
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+}
+
+li span {
+  color: #5b2c83;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+div section a:visited {
+  color: #116817 ; /*#1e1dae*/
+}
+
+body section a:link {
+  color: #c40000;
+}
+
+h2 {
+  color:#3c393c;
+  text-align: center;
+}

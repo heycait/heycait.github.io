@@ -1,169 +1,171 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default2.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index-template2.css">
+    <title>Caitlyn's Blogs</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat' rel='stylesheet' type='text/css'>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
-  <title>Caitlyn's Blogs</title>
-</head>
+  <nav>
+    <li><a href="#"><i class="fa fa-bars fa-2x"></i></a>
+      <ul>
+        <li><a href="http://heycait.github.io/"><i class="fa fa-home fa-lg"></i> Home</a></li>
+        <li><a href="blog"><i class="fa fa-newspaper-o fa-lg"></i> Blog</a></li>
+        <li><a href="projects.html"><i class="fa fa-file-code-o fa-lg"></i> Projects</a></li>
+        <!--<li><a href="#"><i class="fa fa-briefcase fa-3x"></i></a></li> -->
+        <li><a href="/resources.html"><i class="fa fa-book fa-lg"></i> Resources</a></li>
+        <li><a href="about.html"><i class="fa fa-venus fa-lg"></i> About</a></li>
+        <li><a href="contact.html"><i class="fa fa-envelope-o fa-lg"></i> Contact</i></a></li>
+      </ul>
+    </li>
+    <div id="rjust">
+      <li><a href="https://github.com/heycait"><i class="fa fa-github-square fa-2x"></i></a></li>
+      <li><a href="https://twitter.com/hey_cait"><i class="fa fa-twitter fa-2x"></i></a></li>
+      <li><a href="https://plus.google.com/+CaitlynYu2"><i class="fa fa-google-plus fa-2x"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/caitlynyu"><i class="fa fa-linkedin fa-2x"></i></a></li>
+      <li><a href="mailto:caitlynmyu@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
+    </div>
+  </nav>
 
-<nav>
-  <ul>
-    <li><a href="http://heycait.github.io/"><i class="fa fa-home fa-3x"></i></a></li>
-    <li><a href="/blog"><i class="fa fa-newspaper-o fa-3x"></i></a></li>
-    <li><a href="/projects"><i class="fa fa-file-code-o fa-3x"></i></a></li>
-    <!--
-    <li><a href="#"><i class="fa fa-briefcase fa-3x"></i></a></li>
-    <li><a href="/resources"><i class="fa fa-book fa-3x"></i></a></li> -->
-    <li><a href="about"><i class="fa fa-venus fa-3x"></i></a></li>
-    <li><a href="/contact"><i class="fa fa-envelope-o fa-3x"></i></i></a></li>
-  </ul>
-</nav>
+  <body>
+    <div class="body" id="body">
+      <section>
+          <h1>Arrays vs. Hashes</h1>
+          <h4>201502.17</h4>
+        </section>
 
+        <section>
+          <h4>Arrays: The Structured List</h4>
 
-<body>
+            <p>
+              Arrays are Ruby's way of collecting objects in a list form. It's sort of like an ordered list of things, such as:
+            </p>
 
-<section>
-    <h1>Arrays vs. Hashes</h1>
-    <h4>201502.17</h4>
-  </section>
+            <p>
+              Syllabus: <br>
+              <ol>
+                <li>Git & GitHub</li>
+                <li>HTML & CSS</li>
+                <li>Ruby Basics</li>
+              </ol>
+            </p>
 
-  <section>
-    <h4>Arrays: The Structured List</h4>
+            <p>
+              However in Ruby, an array is written like this: <br>
 
-      <p>
-        Arrays are Ruby's way of collecting objects in a list form. It's sort of like an ordered list of things, such as:
-      </p>
+              <span class="code_block">array_name = [item 1, item 2, item 3, etc]</span>
+            </p>
 
-      <p>
-        Syllabus: <br>
-        <ol>
-          <li>Git & GitHub</li>
-          <li>HTML & CSS</li>
-          <li>Ruby Basics</li>
-        </ol>
-      </p>
+            <p>
+              So the list above could be re-written as: <br>
 
-      <p>
-        However in Ruby, an array is written like this: <br>
+              <span class="code_block">syllabus = ["Git & GitHub", "HTML & CSS", "Ruby Basics"]</span>
+            </p>
 
-        <span class="code_block">array_name = [item 1, item 2, item 3, etc]</span>
-      </p>
+            <p>
+              The items (or in Ruby-speak, elements) in the array can be referred to by calling the array name followed by the position (called the index) of the element in the list. For example:<br>
 
-      <p>
-        So the list above could be re-written as: <br>
+              <span class="code_block">array_name[1]</span>
+            </p>
 
-        <span class="code_block">syllabus = ["Git & GitHub", "HTML & CSS", "Ruby Basics"]</span>
-      </p>
+            <p>
+              To call an element from the array named "syllabus" you'd write: <br>
 
-      <p>
-        The items (or in Ruby-speak, elements) in the array can be referred to by calling the array name followed by the position (called the index) of the element in the list. For example:<br>
+              <span class="code_block">syllabus[1]</span> <br>
 
-        <span class="code_block">array_name[1]</span>
-      </p>
+              Where the number "1" can be any number that references the position (index) of the element in the array.
+            </p>
 
-      <p>
-        To call an element from the array named "syllabus" you'd write: <br>
+            <p>
+              You could also call the reverse. Let's say you already know the element, but you don't know where it is in the list. To find the index, you'd call the index method: <br>
 
-        <span class="code_block">syllabus[1]</span> <br>
+              <span class="code_block">syllabus.index(2)</span> <br>
 
-        Where the number "1" can be any number that references the position (index) of the element in the array.
-      </p>
+              Which will return "Ruby Basics".
 
-      <p>
-        You could also call the reverse. Let's say you already know the element, but you don't know where it is in the list. To find the index, you'd call the index method: <br>
+            </p>
 
-        <span class="code_block">syllabus.index(2)</span> <br>
+            <p>
+              The only major difference of significance between an array and a normal ordered list is the counting. Typically, you count starting from one, followed by two, then three, four, five and so on. In Ruby, you start at zero. Therefore, instead of "Git & GitHub" being the first item on the list, it is the zeroth element in the array. "HTML & CSS" is the first and "Ruby Basics" is the second.
+            </p>
 
-        Which will return "Ruby Basics".
+            <p>
+              Going back to the example of how arrays are written in Ruby, we can write the index below each element of the actual position it occupies. Thus, <br>
 
-      </p>
+              <span class="code_block">array_name = [item 1, item 2, item 3, etc] </span><br>
+              0,1,2,3
+            </p>
 
-      <p>
-        The only major difference of significance between an array and a normal ordered list is the counting. Typically, you count starting from one, followed by two, then three, four, five and so on. In Ruby, you start at zero. Therefore, instead of "Git & GitHub" being the first item on the list, it is the zeroth element in the array. "HTML & CSS" is the first and "Ruby Basics" is the second.
-      </p>
+          <h4>Hashes: The Chaotic Array</h4>
 
-      <p>
-        Going back to the example of how arrays are written in Ruby, we can write the index below each element of the actual position it occupies. Thus, <br>
+            <p>
+               Hashes are practically arrays gone crazy. Instead of an ordered list, like a syllabus of topics organized by week, it is more of a random to-do list. It doesn't matter what order anything is in, because instead of using numbers to order the list, it uses what's known as "keys". And the elements of the keys are called "values", together they are known as key-value pairs. You write a hash as follows: <br>
+               <span class="code_block"> hash_name = { key1 => value1, key2 => value2, key3 => value3, etc. }</span>
+            </p>
+              An example hash could be something like this: <br>
 
-        <span class="code_block">array_name = [item 1, item 2, item 3, etc] </span><br>
-        0,1,2,3
-      </p>
+              <span class="code_block">my_pets = { "Pinkie" => "cat", "Tiger" => "cat", "Missy" => "dog"}</span>
+            <p>
 
-    <h4>Hashes: The Chaotic Array</h4>
+            <p>
+              Calling an entry in a hash is just like in an array, you would write the hash name followed by the key of the value you're looking for. <br>
 
-      <p>
-         Hashes are practically arrays gone crazy. Instead of an ordered list, like a syllabus of topics organized by week, it is more of a random to-do list. It doesn't matter what order anything is in, because instead of using numbers to order the list, it uses what's known as "keys". And the elements of the keys are called "values", together they are known as key-value pairs. You write a hash as follows: <br>
-         <span class="code_block"> hash_name = { key1 => value1, key2 => value2, key3 => value3, etc. }</span>
-      </p>
-        An example hash could be something like this: <br>
+              <span class="code_block">my_pets["Missy"]</span>
+            </p>
 
-        <span class="code_block">my_pets = { "Pinkie" => "cat", "Tiger" => "cat", "Missy" => "dog"}</span>
-      <p>
+            <p>
+              And just like arrays, if you know the value but not it's key, you can call the index method: <br>
 
-      <p>
-        Calling an entry in a hash is just like in an array, you would write the hash name followed by the key of the value you're looking for. <br>
+              <span class="code_block">my_pets.index("Tiger")</span>
+            </p>
 
-        <span class="code_block">my_pets["Missy"]</span>
-      </p>
+            <p>
+              NOTE: A key must be unique, otherwise if you were to write the hash above with the key-value pairs switched, the value of the key "cat" would be overridden by the second entry. <br>
 
-      <p>
-        And just like arrays, if you know the value but not it's key, you can call the index method: <br>
+              <span class="code_block">my_pets = { "cat" => "Tiger", "cat" => "Pinkie" , "dog" => "Missy"}</span> <br>
 
-        <span class="code_block">my_pets.index("Tiger")</span>
-      </p>
+              Calling the value for "cat" only results in "Pinkie" since it was entered second and essentially replaced the first entry.
+            </p>
 
-      <p>
-        NOTE: A key must be unique, otherwise if you were to write the hash above with the key-value pairs switched, the value of the key "cat" would be overridden by the second entry. <br>
+            <p>
+              It might seem weird to want an unordered list. I mean, isn't the definition of list "a series of numerals" (thanks Merriam-Webster)? What purpose would an unordered list serve? Good question, and now onto...
+            </p>
 
-        <span class="code_block">my_pets = { "cat" => "Tiger", "cat" => "Pinkie" , "dog" => "Missy"}</span> <br>
+          <h4>Array or Hash?</h4>
+            <p>
+              As an ordered list, when to use an array is actually quite simple. If you want a list that always stays in a certain order, you use an array.
+            </p>
 
-        Calling the value for "cat" only results in "Pinkie" since it was entered second and essentially replaced the first entry.
-      </p>
+            <p>
+              For example, lets say you have a sign-up list for a popular class at your local gym. Only the first 25 people to sign up are guaranteed a space in the class. The order of sign ups are important, therefore you would use an array to store this information. As a each person signs up, they are added onto the end of the array. The instructor can then see exactly when each person signed up and let those first 25 people in.
+            </p>
 
-      <p>
-        It might seem weird to want an unordered list. I mean, isn't the definition of list "a series of numerals" (thanks Merriam-Webster)? What purpose would an unordered list serve? Good question, and now onto...
-      </p>
+            <p>
+              Hashes, on the other hand, are used when you have a list that doesn't need the structure of any particular order. As such, a hash actually may not keep the order you wrote it in. So if you called the my_pets hash above, it could print back to you with the key-value pairs in any order. <br>
 
-    <h4>Array or Hash?</h4>
-      <p>
-        As an ordered list, when to use an array is actually quite simple. If you want a list that always stays in a certain order, you use an array.
-      </p>
+              <span class="code_block">my_pets = { "Tiger" => "cat", "Pinkie" => "cat", "Missy" => "dog"}</span>
+            </p>
 
-      <p>
-        For example, lets say you have a sign-up list for a popular class at your local gym. Only the first 25 people to sign up are guaranteed a space in the class. The order of sign ups are important, therefore you would use an array to store this information. As a each person signs up, they are added onto the end of the array. The instructor can then see exactly when each person signed up and let those first 25 people in.
-      </p>
+            <p>
+              You could use a hash when you want to store any kind of information (value) that has a certain characteristic (key) associated with it. For example, lets say there's a hot night club you've been dying to get into. One day you just so happen to meet the owner and now you're on the list! Unfortunately for some, that list also includes the "people barred from this club". You could certainly use a hash to store this information. You could store everyone's name as the unique key and a "yes" for entry or a "no" for denied. Using a hash, the bouncer could look up the person's name, and see whether or not to give them entry. The order on the list doesn't matter, it's the person's name (the unique key) and the "yes" or "no" value that's important here.
+            </p>
 
-      <p>
-        Hashes, on the other hand, are used when you have a list that doesn't need the structure of any particular order. As such, a hash actually may not keep the order you wrote it in. So if you called the my_pets hash above, it could print back to you with the key-value pairs in any order. <br>
+          <h4>Conclusion</h4>
+            <p>
+              So the point of all this? Arrays and hashes are used to store a collection of information whether that be an ordered list or not. If order matters, you use an array. If it doesn't matter and what you need is a unique identifier to store some piece of information, you use a hash that has key-value pairs.
+            </p>
 
-        <span class="code_block">my_pets = { "Tiger" => "cat", "Pinkie" => "cat", "Missy" => "dog"}</span>
-      </p>
-
-      <p>
-        You could use a hash when you want to store any kind of information (value) that has a certain characteristic (key) associated with it. For example, lets say there's a hot night club you've been dying to get into. One day you just so happen to meet the owner and now you're on the list! Unfortunately for some, that list also includes the "people barred from this club". You could certainly use a hash to store this information. You could store everyone's name as the unique key and a "yes" for entry or a "no" for denied. Using a hash, the bouncer could look up the person's name, and see whether or not to give them entry. The order on the list doesn't matter, it's the person's name (the unique key) and the "yes" or "no" value that's important here.
-      </p>
-
-    <h4>Conclusion</h4>
-      <p>
-        So the point of all this? Arrays and hashes are used to store a collection of information whether that be an ordered list or not. If order matters, you use an array. If it doesn't matter and what you need is a unique identifier to store some piece of information, you use a hash that has key-value pairs.
-      </p>
-
-  </section>
+        </section>
 
 
-</body>
+    </div>
+  </body>
 
-<footer>
-  <ul>
-    <li><a href="https://github.com/heycait"><i class="fa fa-github-square fa-2x"></i></a></li>
-    <li><a href="https://twitter.com/hey_cait"><i class="fa fa-twitter fa-2x"></i></a></li>
-    <li><a href="https://plus.google.com/+CaitlynYu2"><i class="fa fa-google-plus fa-2x"></i></a></li>
-    <li><a href="https://www.linkedin.com/in/caitlynyu"><i class="fa fa-linkedin fa-2x"></i></a></li>
-    <li><a href="mailto:caitlynmyu@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
-  </ul>
-  <p>&copy 2015 <span>Caitlyn Yu</span></p>
-</footer>
+  <footer>
+    &copy <span>Caitlyn</span> 2015
+  </footer>
+</html>
 

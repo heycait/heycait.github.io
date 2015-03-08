@@ -1,93 +1,95 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default2.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index-template2.css">
+    <title>Caitlyn's Blogs</title>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
-  <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat' rel='stylesheet' type='text/css'>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-template.css">
-  <title>Enumerable#group_by</title>
-</head>
+  <nav>
+    <li><a href="#"><i class="fa fa-bars fa-2x"></i></a>
+      <ul>
+        <li><a href="http://heycait.github.io/"><i class="fa fa-home fa-lg"></i> Home</a></li>
+        <li><a href="blog"><i class="fa fa-newspaper-o fa-lg"></i> Blog</a></li>
+        <li><a href="projects.html"><i class="fa fa-file-code-o fa-lg"></i> Projects</a></li>
+        <!--<li><a href="#"><i class="fa fa-briefcase fa-3x"></i></a></li> -->
+        <li><a href="/resources.html"><i class="fa fa-book fa-lg"></i> Resources</a></li>
+        <li><a href="about.html"><i class="fa fa-venus fa-lg"></i> About</a></li>
+        <li><a href="contact.html"><i class="fa fa-envelope-o fa-lg"></i> Contact</i></a></li>
+      </ul>
+    </li>
+    <div id="rjust">
+      <li><a href="https://github.com/heycait"><i class="fa fa-github-square fa-2x"></i></a></li>
+      <li><a href="https://twitter.com/hey_cait"><i class="fa fa-twitter fa-2x"></i></a></li>
+      <li><a href="https://plus.google.com/+CaitlynYu2"><i class="fa fa-google-plus fa-2x"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/caitlynyu"><i class="fa fa-linkedin fa-2x"></i></a></li>
+      <li><a href="mailto:caitlynmyu@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
+    </div>
+  </nav>
 
-<nav>
-  <ul>
-    <li><a href="http://heycait.github.io/"><i class="fa fa-home fa-3x"></i></a></li>
-    <li><a href="/blog"><i class="fa fa-newspaper-o fa-3x"></i></a></li>
-    <li><a href="/projects"><i class="fa fa-file-code-o fa-3x"></i></a></li>
-    <!--
-    <li><a href="#"><i class="fa fa-briefcase fa-3x"></i></a></li>
-    <li><a href="/resources"><i class="fa fa-book fa-3x"></i></a></li> -->
-    <li><a href="about"><i class="fa fa-venus fa-3x"></i></a></li>
-    <li><a href="/contact"><i class="fa fa-envelope-o fa-3x"></i></i></a></li>
-  </ul>
-</nav>
+  <body>
+    <div class="body" id="body">
+       <section>
+         <h1>Enumerable method: group_by </h1>
+         <h4>201502.23</h4>
+       </section>
 
+       <section>
+         <h4>Enumerable</h4>
+           <p>
+             Enumerable is a type of module in Ruby and is similar to classes. It's use is to collect related methods and constants, such as the Math module which includes math constants and operations like Pi (Math::Pi) and square root (Math.sqrt(#)). However, modules can also be used as <i>mixins</i> which allows for the use of properties outside a class. Since Ruby does not allow for multiple inheritance like other object-orienting languages, using a module as a <i>mixin</i> is an alternative to incorporating other methods and definitions outside the class you're working with.
+           </p>
 
-<body>
+           <p>
+             In the case of the Enumerable module, that gives us the use of methods that search and sort. As such, it appears to be applicable only for ranges, arrays, and hashes.
+           </p>
 
-  <section>
-    <h1>Enumerable method: group_by </h1>
-    <h4>201502.23</h4>
-  </section>
+           <p><a href="http://www.rubyist.net/~slagell/ruby/modules.html">Reference</a></p>
 
-  <section>
-    <h4>Enumerable</h4>
-      <p>
-        Enumerable is a type of module in Ruby and is similar to classes. It's use is to collect related methods and constants, such as the Math module which includes math constants and operations like Pi (Math::Pi) and square root (Math.sqrt(#)). However, modules can also be used as <i>mixins</i> which allows for the use of properties outside a class. Since Ruby does not allow for multiple inheritance like other object-orienting languages, using a module as a <i>mixin</i> is an alternative to incorporating other methods and definitions outside the class you're working with.
-      </p>
+       <h4>Enumerable method: group_by</h4>
+         <p>
+           group_by {|object| code block} --> result_hash <br>
+           group_by --> an_enumerator
+         </p>
 
-      <p>
-        In the case of the Enumerable module, that gives us the use of methods that search and sort. As such, it appears to be applicable only for ranges, arrays, and hashes.
-      </p>
+         <p>
+           The method group_by sorts a collection according to the results of a code block (if there is no code block, an enumerator is return). The collection is returned as a hash where the keys are the results from running the code block and the values are an array of the elements in the collection that result in that key. For example:
+         </p>
 
-      <p><a href="http://www.rubyist.net/~slagell/ruby/modules.html">Reference</a></p>
+         <p>
+           (1..6).group_by {|number| number % 3} <br>
+           #=> {0 => [3,6], 1 => [1,4], 2 => [2,5]}
+         </p>
 
-  <h4>Enumerable method: group_by</h4>
-    <p>
-      group_by {|object| code block} --> result_hash <br>
-      group_by --> an_enumerator
-    </p>
+         <p>
+           The code block is asking for the results of taking an number from 1 to 6, dividing it by 3, and finding the remainder. This returns a hash that organizes the numbers 1 to 6 by the remainder it returns when evaluating the expression (number % 3). Reading the hash, we know that 3 and 6 returns no remainder (a value of 0), 1 and 4 returns a remainder of 1, and 2 and 5 return a remainder of 2.
+         </p>
 
-    <p>
-      The method group_by sorts a collection according to the results of a code block (if there is no code block, an enumerator is return). The collection is returned as a hash where the keys are the results from running the code block and the values are an array of the elements in the collection that result in that key. For example:
-    </p>
+         <p>
+           NOTE: While this method can be used on ranges, arrays, and hashes, it seems most suitable to ranges and arrays with relatively simple code blocks.
+         </p>
 
-    <p>
-      (1..6).group_by {|number| number % 3} <br>
-      #=> {0 => [3,6], 1 => [1,4], 2 => [2,5]}
-    </p>
+       <h4>Uses</h4>
+         <p>
+           The Enumerable group_by method is very useful if you want to organize data by the results of a code block. It can be used for grouping numerical answers to a mathematical expression such as the example shown above or it could be used to group other data such as strings by some property. Although it's possible to use this method to sort strings, it appears the best and ideal usage is for numbers and mathematical expressions with simple code blocks (where you want the results of different answers, if you're only looking for one answer, the select method would be better).
+         </p>
 
-    <p>
-      The code block is asking for the results of taking an number from 1 to 6, dividing it by 3, and finding the remainder. This returns a hash that organizes the numbers 1 to 6 by the remainder it returns when evaluating the expression (number % 3). Reading the hash, we know that 3 and 6 returns no remainder (a value of 0), 1 and 4 returns a remainder of 1, and 2 and 5 return a remainder of 2.
-    </p>
-
-    <p>
-      NOTE: While this method can be used on ranges, arrays, and hashes, it seems most suitable to ranges and arrays with relatively simple code blocks.
-    </p>
-
-  <h4>Uses</h4>
-    <p>
-      The Enumerable group_by method is very useful if you want to organize data by the results of a code block. It can be used for grouping numerical answers to a mathematical expression such as the example shown above or it could be used to group other data such as strings by some property. Although it's possible to use this method to sort strings, it appears the best and ideal usage is for numbers and mathematical expressions with simple code blocks (where you want the results of different answers, if you're only looking for one answer, the select method would be better).
-    </p>
-
-    <p>
-      There are many ways of using this method but other methods exist that would be better still. Unfortunately, I can't think of any example besides the one shown above that would utilize this method the best and be the simplest solution.
-    </p>
+         <p>
+           There are many ways of using this method but other methods exist that would be better still. Unfortunately, I can't think of any example besides the one shown above that would utilize this method the best and be the simplest solution.
+         </p>
 
 
-    <p><a href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-group_by">Ruby Docs</a></p>
+         <p><a href="http://ruby-doc.org/core-2.2.0/Enumerable.html#method-i-group_by">Ruby Docs</a></p>
 
- </section>
-</body>
+      </section>
+    </div>
+  </body>
 
-<footer>
-  <ul>
-    <li><a href="https://github.com/heycait"><i class="fa fa-github-square fa-2x"></i></a></li>
-    <li><a href="https://twitter.com/hey_cait"><i class="fa fa-twitter fa-2x"></i></a></li>
-    <li><a href="https://plus.google.com/+CaitlynYu2"><i class="fa fa-google-plus fa-2x"></i></a></li>
-    <li><a href="https://www.linkedin.com/in/caitlynyu"><i class="fa fa-linkedin fa-2x"></i></a></li>
-    <li><a href="mailto:caitlynmyu@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
-  </ul>
-  <p>&copy 2015 <span>Caitlyn Yu</span></p>
-</footer>
+  <footer>
+    &copy <span>Caitlyn</span> 2015
+  </footer>
+</html>
 
