@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../stylesheets/default2.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index-template2.css">
-    <title>Caitlyn's Blogs</title>
+    <title>Arrays & Hashes</title>
   </head>
 
   <nav>
@@ -31,14 +31,14 @@
   </nav>
 
   <body>
-    <div class="body" id="body">
+    <div class="body">
       <section>
-          <h1>Arrays vs. Hashes</h1>
-          <h4>201502.17</h4>
+          <h1 id="title">Arrays vs. Hashes</h1>
+          <h4 id="title">Bootdate 201502.17</h4>
         </section>
 
         <section>
-          <h4>Arrays: The Structured List</h4>
+          <h3>Arrays: The Structured List</h3>
 
             <p>
               Arrays are Ruby's way of collecting objects in a list form. It's sort of like an ordered list of things, such as:
@@ -99,7 +99,7 @@
               0,1,2,3
             </p>
 
-          <h4>Hashes: The Chaotic Array</h4>
+          <h3>Hashes: The Chaotic Array</h3>
 
             <p>
                Hashes are practically arrays gone crazy. Instead of an ordered list, like a syllabus of topics organized by week, it is more of a random to-do list. It doesn't matter what order anything is in, because instead of using numbers to order the list, it uses what's known as "keys". And the elements of the keys are called "values", together they are known as key-value pairs. You write a hash as follows: <br>
@@ -134,7 +134,7 @@
               It might seem weird to want an unordered list. I mean, isn't the definition of list "a series of numerals" (thanks Merriam-Webster)? What purpose would an unordered list serve? Good question, and now onto...
             </p>
 
-          <h4>Array or Hash?</h4>
+          <h3>Array or Hash?</h3>
             <p>
               As an ordered list, when to use an array is actually quite simple. If you want a list that always stays in a certain order, you use an array.
             </p>
@@ -153,7 +153,7 @@
               You could use a hash when you want to store any kind of information (value) that has a certain characteristic (key) associated with it. For example, lets say there's a hot night club you've been dying to get into. One day you just so happen to meet the owner and now you're on the list! Unfortunately for some, that list also includes the "people barred from this club". You could certainly use a hash to store this information. You could store everyone's name as the unique key and a "yes" for entry or a "no" for denied. Using a hash, the bouncer could look up the person's name, and see whether or not to give them entry. The order on the list doesn't matter, it's the person's name (the unique key) and the "yes" or "no" value that's important here.
             </p>
 
-          <h4>Conclusion</h4>
+          <h3>Conclusion</h3>
             <p>
               So the point of all this? Arrays and hashes are used to store a collection of information whether that be an ordered list or not. If order matters, you use an array. If it doesn't matter and what you need is a unique identifier to store some piece of information, you use a hash that has key-value pairs.
             </p>

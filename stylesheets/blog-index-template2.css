@@ -1,5 +1,11 @@
-#body {
+#title {
+  color: #3c393c;
+  margin: 0.1em;
+}
+
+h3 {
   text-align: center;
+  color: #5b2c83;
 }
 
 .list {
@@ -20,7 +26,3 @@ body section a:link {
   color: #c40000;
 }
 
-h2 {
-  color:#3c393c;
-  text-align: center;
-}

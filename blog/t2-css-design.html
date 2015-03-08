@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../stylesheets/default2.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index-template2.css">
-    <title>Caitlyn's Blogs</title>
+    <title>CSS Inline Property</title>
   </head>
 
   <nav>
@@ -31,15 +31,15 @@
   </nav>
 
   <body>
-    <div class="body" id="body">
+    <div class="body">
       <section>
-          <h1>CSS Display Property: Inline vs. Inline-block</h1>
-          <h4>Bootdate 201502.13</h4>
+          <h1 id="title">CSS Display Property: Inline vs. Inline-block</h1>
+          <h4 id="title">Bootdate 201502.13</h4>
         </section>
 
         <section>
 
-          <h4>Display & Space in CSS</h4>
+          <h3>Display & Space in CSS</h3>
             <p>
               To understand how inline and inline-block work in CSS, you must understand how space is defined in HTML. In HTML, an element such as a div, section, or p tag takes up a certain amount of space by default. That default space is similar to a line on a sheet of loose-leaf paper. Imagine for instance you've got a blank sheet of college-rule paper. When you write a letter (and nothing else) on the first line, that single letter effectively takes up the whole first line by default. It's basically the same concept in HTML. However, this default space can be changed in a linked CSS stylesheet to a different shape, space, or location so that your single letter--or block of text, image, etc--doesn't have to be on a line all by itself. To illustrate further, recall the last time you added an image to the middle of a Word document filled with text. The picture sat smack down in the middle, right? And if the picture height was too big, it adjusted that one line to accommodate it and reverted back to the original line spacing afterward. That's Word's default setting--to place the image right after the preceding text and directly before the following text. However, just like the image settings Word offers, CSS offers the same flexibility when it comes to formatting an HTML element on a website.
           </p>
@@ -48,7 +48,7 @@
             CSS has a display property that allows you to change how the element behaves in relation to the others surrounding it. The possible values for the display property are: inline, inline-block, block, run-in, or none. NOTE: Only the first two will be discussed here.
           </p>
 
-          <h4>display: inline</h4>
+          <h3>display: inline</h3>
             <p>
               Back to the college-rule paper example with the single letter written on the first line. Instead of writing a word by writing each letter on it's own line, you'd write the next letter right next to it. That's what the inline value does in CSS. Instead of the default spacing, the inline value allows the next element to sit directly next to the first element as in the second letter of a word on a sheet of paper.
             </p>
@@ -61,7 +61,7 @@
 
             <img src="http://cdn.css-tricks.com/wp-content/uploads/2011/09/inlinepadding.png"/>
 
-          <h4>display: inline-block</h4>
+          <h3>display: inline-block</h3>
             <p>
               An inline-block on the other hand, allows for altering the top/bottom margin (or the line spacing in our college-rule paper example) and can effectively create a "block". So instead of a college-rule paper, you now have a white sheet of printer paper without any lines on it. Your first word could be size 30 font and the next one could be size 50, since there is no line, you adjust the line spacing automatically as you write your next words. For a different visual, let's place these two words in their own imaginary boxes. Now let's say you write a paragraph in normal font size after these two words. You write around the boxes, next to it, above it, below it, whatever. This is what inline-block does in CSS. It allows you to wrap other elements around an inline-block as you would the example above or an image in a Word document when you select the wrap around option.
             </p>
@@ -69,7 +69,7 @@
             <img src="http://cdn.css-tricks.com/wp-content/uploads/2011/09/inline-block.png"/>
 
 
-          <h4>Conclusion</h4>
+          <h3>Conclusion</h3>
             <p>
               That's my real world analogy of CSS's display property for inline and inline-block. Hope that helped clear things up. If it didn't and I, unfortunately, just made it worse, checkout <a href="http://css-tricks.com/almanac/properties/d/display/">CSS Trick</a> which is also the source of the images above.
             </p>

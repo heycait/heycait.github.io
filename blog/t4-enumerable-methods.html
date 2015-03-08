@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../stylesheets/default2.css">
     <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index-template2.css">
-    <title>Caitlyn's Blogs</title>
+    <title>Enumerable#group_by</title>
   </head>
 
   <nav>
@@ -31,14 +31,14 @@
   </nav>
 
   <body>
-    <div class="body" id="body">
+    <div class="body">
        <section>
-         <h1>Enumerable method: group_by </h1>
-         <h4>201502.23</h4>
+         <h1 id="title">Enumerable method: group_by </h1>
+         <h4 id="title">Bootdate 201502.23</h4>
        </section>
 
        <section>
-         <h4>Enumerable</h4>
+         <h3>Enumerable</h3>
            <p>
              Enumerable is a type of module in Ruby and is similar to classes. It's use is to collect related methods and constants, such as the Math module which includes math constants and operations like Pi (Math::Pi) and square root (Math.sqrt(#)). However, modules can also be used as <i>mixins</i> which allows for the use of properties outside a class. Since Ruby does not allow for multiple inheritance like other object-orienting languages, using a module as a <i>mixin</i> is an alternative to incorporating other methods and definitions outside the class you're working with.
            </p>
@@ -49,7 +49,7 @@
 
            <p><a href="http://www.rubyist.net/~slagell/ruby/modules.html">Reference</a></p>
 
-       <h4>Enumerable method: group_by</h4>
+       <h3>Enumerable method: group_by</h3>
          <p>
            group_by {|object| code block} --> result_hash <br>
            group_by --> an_enumerator
@@ -72,7 +72,7 @@
            NOTE: While this method can be used on ranges, arrays, and hashes, it seems most suitable to ranges and arrays with relatively simple code blocks.
          </p>
 
-       <h4>Uses</h4>
+       <h3>Uses</h3>
          <p>
            The Enumerable group_by method is very useful if you want to organize data by the results of a code block. It can be used for grouping numerical answers to a mathematical expression such as the example shown above or it could be used to group other data such as strings by some property. Although it's possible to use this method to sort strings, it appears the best and ideal usage is for numbers and mathematical expressions with simple code blocks (where you want the results of different answers, if you're only looking for one answer, the select method would be better).
          </p>
