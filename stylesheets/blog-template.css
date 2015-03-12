@@ -4,6 +4,12 @@ body {
 
 img {
   display: block;
+  position: relative;
+  left: 10em;
+}
+
+.center {
+  text-align: center;
 }
 
 .code_block {

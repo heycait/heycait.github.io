@@ -1,6 +1,11 @@
-#title {
+.title {
   color: #3c393c;
   margin: 0.1em;
+}
+
+.heading {
+  text-align: center;
+  color: #3c393c;
 }
 
 h3 {
@@ -26,3 +31,8 @@ body section a:link {
   color: #c40000;
 }
 
+img {
+  display: block;
+  position: relative;
+  left: 20%;
+}
