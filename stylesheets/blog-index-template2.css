@@ -33,6 +33,12 @@ body section a:link {
 
 img {
   display: block;
-  position: relative;
-  left: 20%;
+}
+
+em {
+  color: #1e1dae;
+}
+
+b, strong {
+  color: #1e1dae;
 }
