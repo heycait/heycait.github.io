@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default2.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index-template2.css">
+    <title>Blocks, Procs, and Lambdas</title>
+  </head>
+
+  <nav>
+    <li><a href="#"><i class="fa fa-bars fa-2x"></i></a>
+      <ul>
+        <li><a href="http://heycait.github.io/"><i class="fa fa-home fa-lg"></i> Home</a></li>
+        <li><a href=".."><i class="fa fa-newspaper-o fa-lg"></i> Blog</a></li>
+        <li><a href="../projects.html"><i class="fa fa-file-code-o fa-lg"></i> Projects</a></li>
+        <!--<li><a href="#"><i class="fa fa-briefcase fa-3x"></i></a></li> -->
+        <li><a href="../resources.html"><i class="fa fa-book fa-lg"></i> Resources</a></li>
+        <li><a href="..about.html"><i class="fa fa-venus fa-lg"></i> About</a></li>
+        <li><a href="..contact.html"><i class="fa fa-envelope-o fa-lg"></i> Contact</i></a></li>
+      </ul>
+    </li>
+    <div id="rjust">
+      <li><a href="https://github.com/heycait"><i class="fa fa-github-square fa-2x"></i></a></li>
+      <li><a href="https://twitter.com/hey_cait"><i class="fa fa-twitter fa-2x"></i></a></li>
+      <li><a href="https://plus.google.com/+CaitlynYu2"><i class="fa fa-google-plus fa-2x"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/caitlynyu"><i class="fa fa-linkedin fa-2x"></i></a></li>
+      <li><a href="mailto:caitlynmyu@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
+    </div>
+  </nav>
+
+  <body>
+    <div class="body">
+      <section>
+        <h1 class="title">Blocks, Procs, and Lambdas</h1>
+        <h4 class="title">Bootdate 201503.15</h4>
+      </section>
+
+      <section>
+        <h3>Blocks (The Building <em>Blocks</em> of Procs)</h3>
+          <p>
+            Blocks in Ruby refer to blocks of code. If you've written code before then you've already encountered code blocks. A block is just the code between the keywords <code_words>do</code_words> and <code_words>end</code_words> or between the curly brackets. In the example below, the block is the code inside the curly brackets or the <code>|sum, n| sum + n</code> part. </p>
+
+          <p><img src="../imgs/block.png"/></p>
+
+          <p>Although almost everything in Ruby is an object, blocks are not. They are part of the method that is called. In our example, the block <code>|sum, n| sum + n</code> is part of the inject method and not an individual object. (Methods are another exceptions in Ruby and are also not objects. )
+          </p>
+
+        <h3>What Are Procs?</h3>
+          <p>
+            Procs are objects that contain blocks and can be stored as variables or passed to methods as arguments. The syntax for creating a <code_words>Proc</code_words> is as follows:
+          </p>
+
+          <p><img src="../imgs/proc.png"/></p>
+
+          <p>
+            A <code_words>Proc</code_words> object is instantiated with the new method on <code_words>Proc</code_words> followed by a code block. The code block then becomes the body of the proc and when you call the proc (<code>example_proc.call</code>) the block is executed. Basically, this just means that you store a block as an object and this is what I mean by blocks being the "building <i>blocks</i>" of procs. Once you've made the block into an object through creating a proc, you then can store it in a variable, put it inside an array, send it as method arguments, or treat them as you would any other object.
+          </p>
+
+          <p>
+            <strong>NOTE:</strong> Besides being objects that can be passed around, procs also differ from methods in the way they treat arguments. Procs don't care whether they get the right number of arguments. If there is more than the required amount, it just takes what's needed and if there is not, the parameter gets set to <code_words>nil</code_words>.
+          </p>
+
+        <h3>Where does Lambdas fit into this?</h3>
+          <p>
+            Lambdas are special types of procs. The syntax in creating one differs in that you create a lambda object by specifically explicitly creating it like so:
+          </p>
+
+          <p><img src="../imgs/lambda.png"/></p>
+
+          <p>
+            One way lambdas differ from procs is the way they treat the <code_words>return</code_words> keyword. When code runs into <code_words>return</code_words> inside a lambda, it exits from the body of the lambda and returns to the scope that contains the lambda object. Procs on the other hand triggersa  return from the method in which the proc is being executed (it exits the method or scope containing the proc).
+          </p>
+
+          <p>
+            Lastly, lambdas are pickier than procs and do care about the right number of arguments. Why do these differences matter? <em>"The answer is in the conceptual differences between procedures and methods. Procs in Ruby are drop in code snippets, not methods. Because of this, the Proc return is the proc_return method’s return, and acts accordingly. Lambdas however act just like methods, as they check the number of arguments and do not override the calling methods return. For this reason, it is best to think of lambdas as another way to write methods, an anonymous way at that."</em>–<a href="http://www.reactive.io/tips/2008/12/21/understanding-ruby-blocks-procs-and-lambdas/">reactive.io</a>
+          </p>
+
+        <h3>Summary</h3>
+          <p>
+            Blocks just refer to code blocks and is the code typically written between the keywords <code_words>do</code_words> and <code_words>end</code_words>. They are not objects but part of the method call that contains a block of executable code. Procs are a way to store blocks and are objects. They can be stored as variables and passed around and treated as any other object. A special characteristic of procs is that they are flexible with the number of arguments passed in. Lambdas are a special type of proc. While they also store blocks, they treat the <code_words>return</code_words> keyword differently. When procs encounter a <code_words>return</code_words>, it returns from the method that contains the proc. When lambdas encounter a <code_words>return</code_words>, it returns from the lambdas to the scope that holds the lambda. Lambdas are not flexible like procs when it comes to the number of arguments. As such, lambdas can be seen as another way to write methods.
+          </p>
+
+      </section>
+
+    </div>
+
+  </body>
+
+  <footer>
+    &copy <span>Caitlyn</span> 2015
+  </footer>
+</html>
+
