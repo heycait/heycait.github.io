@@ -1,8 +1,7 @@
-(5..10).inject { |sum, n| sum + n }
-#=> 45
+ruby_hash = {:name => "Caitlyn", :age => 24,
+  :favorite_foods => ['pizza', 'subway sandwiches', 'soup'],
+  :quirk => "I hate bunched up seeds. They look like larvae."}
 
-example_proc = Proc.new {puts "I am a proc block"}
 
 
-ex_lambda = lambda {puts "I am a lambda!"}
-
+p ruby_hash[:name]

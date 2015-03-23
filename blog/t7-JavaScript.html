@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default2.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog-index-template2.css">
+    <title>JavaScript vs. Ruby</title>
+  </head>
+
+  <nav>
+    <li><a href="#"><i class="fa fa-bars fa-2x"></i></a>
+      <ul>
+        <li><a href="http://heycait.github.io/"><i class="fa fa-home fa-lg"></i> Home</a></li>
+        <li><a href=".."><i class="fa fa-newspaper-o fa-lg"></i> Blog</a></li>
+        <li><a href="../projects.html"><i class="fa fa-file-code-o fa-lg"></i> Projects</a></li>
+        <!--<li><a href="#"><i class="fa fa-briefcase fa-3x"></i></a></li> -->
+        <li><a href="../resources.html"><i class="fa fa-book fa-lg"></i> Resources</a></li>
+        <li><a href="../about.html"><i class="fa fa-venus fa-lg"></i> About</a></li>
+        <li><a href="../contact.html"><i class="fa fa-envelope-o fa-lg"></i> Contact</i></a></li>
+      </ul>
+    </li>
+    <div id="rjust">
+      <li><a href="https://github.com/heycait"><i class="fa fa-github-square fa-2x"></i></a></li>
+      <li><a href="https://twitter.com/hey_cait"><i class="fa fa-twitter fa-2x"></i></a></li>
+      <li><a href="https://plus.google.com/+CaitlynYu2"><i class="fa fa-google-plus fa-2x"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/caitlynyu"><i class="fa fa-linkedin fa-2x"></i></a></li>
+      <li><a href="mailto:caitlynmyu@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
+    </div>
+  </nav>
+
+  <body>
+    <div class="body">
+      <section>
+        <h1 class="title">JavaScript vs. Ruby</h1>
+        <h4 class="title">Bootdate 201503.21</h4>
+      </section>
+
+      <section>
+        <h3>JavaScript & Ruby</h3>
+          <p>
+            While there are many similarities between JavaScript and Ruby, there are also a many differences. One in particular, is the idea of hashes in Ruby and it's somewhat functionally equivalent JavaScript counterpart, the object literal.
+          </p>
+
+        <h3>Hashes in Ruby</h3>
+          <p>
+            In Ruby, hashes are unstructured arrays. Instead of having a set order of items, hashes organize items using keys as references to the value they hold. For more on this, refer to <a href="t3-arrays-hashes.html">this post</a>.
+          </p>
+
+          <p> Example of a hash in Ruby <br> <img src="../imgs/ruby_hash.png"/></p>
+
+        <h3>Objects in JavaScript</h3>
+          <p>
+            While JavaScript also has arrays to store items in an ordered list, it doesn't have hashes with key-value pairs like Ruby. However, it has objects (or object literals) that are functionally, and structurally similar.
+          </p>
+
+          <p> Example of an object in JavaScript <br> <img src="../imgs/js_object.png"/></p>
+
+          <p>
+            The MDN JavaScript Guide defines "an object literal [as] a list of zero or more pairs of property names and associated values of an object, enclosed in curly braces." As such, it is very similar to how hashes function in Ruby and syntactically it even looks similar.
+
+          </p>
+
+        <h3>Difference between Ruby Hashes & JavaScript Objects</h3>
+          <h4 class="title">Keys vs. Properties</h4>
+          <p>
+            However is is important to note that in Ruby the keys can be any data type: string, symbol, array, another hash, etc. In JavaScript, this isn't so. Strings, numbers, and variables are acceptable properties in a JS object but with regards to using variables, there are some restrictions. Variables must conform to the same requirements as other variables in JavaScript (although properties can still point to any data type value, including functions) and if it isn't a valid variable, it must be used inside quotes.
+          </p>
+
+          <h4 class="title">Accessing Keys vs. Properties</h4>
+          <p>
+            To access items in a Ruby hash, you would use bracket notation:
+            <br><code>ruby_hash[:name]</code><br>
+
+            To access items in a JS object, you can use bracket (with quotes) or dot notation.
+            <br><code>js_Object['name']</code>
+            <br><code>js_Object.age</code><br>
+          </p>
+
+          <h4 class="title">Acceptable Values</h4>
+          <p>
+            Another difference is that JS objects can store functions as property values and it is this ability that allows you to create JS methods (functions associated with a particular object). Whereas Ruby can only take values and variables. It is this characteristic that make JS objects different from hashes but similar to creating a class in Ruby.
+          </p>
+
+        <h3>Conclusion</h3>
+          <p>
+            In all, Ruby hashes and JavaScript objects are functionally and syntactically similar. The differences lie in the restrictions placed on what makes a key/value in Ruby hashes and those placed on properties/values in JS objects as well as the different ways of accessing the information using bracket and/or dot notation.
+          </p>
+
+      </section>
+
+    </div>
+
+  </body>
+
+  <footer>
+    &copy <span>Caitlyn</span> 2015
+  </footer>
+</html>
+
