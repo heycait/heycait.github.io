@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="stylesheets/cheat-sheet-stylesheet.css">
+
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <h1>SQL Queries</h1>
+    <p>Cheat Sheet</p>
+  </div>
+</div>
+
+<table class="table table-striped">
+
+  <tr>
+    <th>Query</th>
+    <th>SQL</th>
+  </tr>
+  <tr>
+    <td>Select all data</td>
+    <td>SELECT * FROM table_name</td>
+  </tr>
+  <tr>
+    <td>Select certain column data</td>
+    <td>SELECT
+      <br>column_name1, column_name2
+      <br>FROM table_name
+    </td>
+  </tr>
+  <tr>
+    <td>Select certain column data and organize by column descending</td>
+    <td>SELECT
+      <br>column_name1, column_name2
+      <br>FROM table_name
+      <br>ORDER BY column_name2 DESC;
+    </td>
+  </tr>
+  <tr>
+    <td>Select data if other data matches search query</td>
+    <td>SELECT
+      <br>column_name
+      <br>FROM table_name
+      <br>WHERE another_column=num/string
+    </td>
+  </tr>
+  <tr>
+    <td>Select certain columns of data where columns matches search query (number greater than) and in ascending order </td>
+    <td>SELECT
+      <br>column_name1, column_name2
+      <br>FROM table_name
+      <br>WHERE column_name2>num
+      <br>ORDER BY column_name2 ASC;
+    </td>
+  </tr>
+
+</table>
+
+
+<div class="navbar navbar-default navbar-static-bottom">
+  <div class="container">
+    <p class="navbar-text pull-left">&copy 2015 created by Caitlyn & Don</p>
+  </div>
+</div>
+
+</html>
