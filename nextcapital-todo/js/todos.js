@@ -1,28 +1,46 @@
-angular.module('nextCapital', [])
-       .controller('TodoCtrl', function($scope, $http){
-        $scope.todos = [];
+(function(){
 
-        var link = 'http://recruiting-api.nextcapital.com/users/' + sessionStorage.getItem('id') + '/todos.json?api_token=' + sessionStorage.getItem('api_token');
-        $http.get(link)
-             .success(function(response){
-                $scope.todos = response;
-             });
+  var app = angular.module('nextCapital', [])
+
+  app.controller('TodoCtrl', function($http){
+    this.todos = [];
+    this.newTodo = {
+      is_complete: false
+    }
+
+    var link = 'http://recruiting-api.nextcapital.com/users/' + sessionStorage.getItem('id') + '/todos.json?api_token=' + sessionStorage.getItem('api_token');
+
+    $http.get(link)
+         .success(function(response){
+            this.todos = response;
+         });
+
+    this.addTodo = function(){
+      alert('you clicked')
+      this.todos.push({description: $scope.formTodo, is_complete: false});
+
+      var link = 'http://recruiting-api.nextcapital.com/users/' + sessionStorage.getItem('id') + '/todos';
+
+      $http({
+        method: 'POST',
+        url: link,
+        data: {api_token: sessionStorage.getItem('api_token'), todo: {description: $scope.formTodo}},
+      }).success(function(response){
+        console.log(response)
+        alert('stuff happend')
+        debugger
+      });
+
+    };
+  });
+
+})();
+
+
+
+
 // don't let it add if field is blank....
-        $scope.addTodo = function(){
-          alert('you clicked')
-          $scope.todos.push({description: $scope.formTodo, is_complete: false});
 
-          var link = 'http://recruiting-api.nextcapital.com/users/' + sessionStorage.getItem('id') + '/todos';
-          $http({
-            method: 'POST',
-            url: link,
-            data: {api_token: sessionStorage.getItem('api_token'), todo: {description: $scope.formTodo}}
-          }).success(function(response){
-            console.log(response);
-            alert('stuff happened')
-            debugger
-          });
-        };
 
           // $scope.markComplete = function(){
           //   alert('you marked me!')
@@ -44,7 +62,7 @@ angular.module('nextCapital', [])
         //     // window.location.href = '/nextcapital-todo/'
         //   });
         // }
-      });
+      // });
 
 $(function() {
   $( "#sortable" ).sortable({placeholder: "ui-state-highlight"});
