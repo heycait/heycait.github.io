@@ -1,55 +1,171 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Homemade+Apple|Montserrat' rel='stylesheet' type='text/css'>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="stylesheets/default2.css">
-    <title>Caitlyn's GitHub IO</title>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/creddle-inspired.css">
+    <title>Caitlyn &lt;WRITES/CODES/EXPLAINS?&gt;</title>
   </head>
 
-  <nav>
-    <li><a href="#"><i class="fa fa-bars fa-2x"></i></a>
-      <ul>
-        <li><a href="http://heycait.github.io/"><i class="fa fa-home fa-lg"></i> Home</a></li>
-        <li><a href="blog"><i class="fa fa-newspaper-o fa-lg"></i> Blog</a></li>
-        <li><a href="projects.html"><i class="fa fa-file-code-o fa-lg"></i> Projects</a></li>
-        <!--<li><a href="#"><i class="fa fa-briefcase fa-3x"></i></a></li> -->
-        <li><a href="resources.html"><i class="fa fa-book fa-lg"></i> Resources</a></li>
-        <li><a href="about.html"><i class="fa fa-venus fa-lg"></i> About</a></li>
-        <li><a href="contact.html"><i class="fa fa-envelope-o fa-lg"></i> Contact</i></a></li>
-      </ul>
-    </li>
-    <div id="rjust">
-      <li><a href="https://github.com/heycait"><i class="fa fa-github-square fa-2x"></i></a></li>
-      <li><a href="https://twitter.com/hey_cait"><i class="fa fa-twitter fa-2x"></i></a></li>
-      <li><a href="https://plus.google.com/+CaitlynYu2"><i class="fa fa-google-plus fa-2x"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/caitlynyu"><i class="fa fa-linkedin fa-2x"></i></a></li>
-      <li><a href="mailto:caitlynmyu@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a></li>
+  <header>
+    <div id="site-heading">
+      <h1 class="remove-margin" id="title"><a href="caitlyncodes.com">Caitlyn Codes</a></h1>
+      <p class="code-font">write -> code -> explain?
+        <span id="plus-sign">+</span>
+        random musings
+      </p>
     </div>
-  </nav>
+
+    <aside id="social-media">
+      <li><a href="https://github.com/heycait"><i class="fa fa-github-alt fa-2x"></i></a></li>
+      <li><a href="https://twitter.com/hey_cait"><i class="fa fa-twitter fa-2x"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/caitlynyu"><i class="fa fa-linkedin fa-2x"></i></a></li>
+      <li><a href="mailto:caitlynmyu@gmail.com"><i class="fa fa-envelope fa-2x"></i></a></li>
+    </aside>
+  </header>
 
   <body>
-    <div class="body">
-      <section>
-        <img src="imgs/swing.jpg" id="avatar"/>
+    <div id="body">
+      <section id="blog" class="page-section"><a href="#blog"></a>
+        <h1 class="section-title">Blog</h1>
+        <span class="horizontal-rule"></span>
+
+
+        <ul class="list">
+          <li><a href="t8-tech.html">Web Security</a> <span>March 29, 2015</span></li>
+          <li><a href="t7-JavaScript.html">JavaScript vs. Ruby</a> <span>March 21, 2015</span></li>
+          <li><a href="t6-oop-concepts.html">Blocks, Procs, and Lambdas</a> <span>March 14, 2015</span></li>
+          <li><a href="t5-ruby-classes">Ruby Classes</a> <span>March 08, 2015</span></li>
+          <li><a href="t4-enumerable-methods">Enumerable Method: group_by</a> <span>February 23, 2015</span></li>
+          <li><a href="t3-arrays-hashes">Arrays & Hashes</a> <span>February 17, 2015</span></li>
+          <li><a href="t2-css-design.html">CSS Display Property: Inline vs. Inline-block</a> <span>February 13, 2015</span></li>
+          <li><a href="t1-git-blog.html">Git and GitHub</a> <span>February 6, 2015</span></li>
+        </ul>
+
+        <ul class="list">
+          <li><a href="phase-1.html">First Day of DBC & My Take On It</a> <span>April 18, 2015</span></li>
+          <li><a href="c9-questions.html">Asking Good Questions</a> <span>March 31, 2015</span></li>
+          <li><a href="c8-conflict.html">Dealing with Conflict</a> <span>March 29, 2015</span></li>
+          <li><a href="c7-values.html">Combating Stereotype Threat with Affirmation</a> <span>March 21, 2015</span></li>
+          <li><a href="c6-stereotype-threat.html">Stereotype Threat</a> <span>March 14, 2015</span></li>
+          <li><a href="c5-feedback.html">Feedback</a> <span>March 6, 2015</span></li>
+          <li><a href="c4-tech-issues.html">Women in Technology: Issue Plaguing the Tech Field</a> <span>February 23, 2015</span></li>
+          <li><a href="c3_thinking-style.html">My Thinking Style</a> <span>February 18, 2015</span></li>
+          <li><a href="c1-chefs-kitchen.html">Chef's Kitchen & Personal Motivations for DBC</a> <span>February 6, 2015</span></li>
+        </ul>
+
       </section>
 
+      <section id="projects" class="page-section"><a href="#projects"></a>
+        <h1 class="section-title">Projects</h1>
+        <span class="horizontal-rule"></span>
 
-      <section>
-        <p><i class="fa fa-quote-left fa-lg black" "black"></i>Welcome to my first website built from the ground up on my blood, sweat, and tears. Just kidding. Or am I? Anyways, here is where I blog about my experience at Dev Bootcamp, both the technical and cultural side of the journey; post <i>my</i> explanations of programming concepts and jargon for fellow DBCers, coding newbs, and the curious laymen; share awesome tech articles and resources, and one day showcase my projects. Enjoy it while it's still in its marvelous alpha-stage glory. <i class="fa fa-quote-right fa-lg black" "black"></i></p>
+        <table>
+          <!-- <thead> -->
+            <!-- <th>Date</th> -->
+            <!-- <th>Link</th> -->
+          <!-- </thead> -->
+
+          <tbody>
+            <tr>
+              <td>October 2015</td>
+              <td><a href="https://github.com/heycait/credible-email">Credible Email</a></td>
+            </tr>
+            <tr>
+              <td>September 2015</td>
+              <td><a href="https://github.com/heycait/nextcapital-todo">NextCapital ToDo</a></td>
+            </tr>
+            <tr>
+              <td>June 2015</td>
+              <td><a href="http://hobbees.herokuapp.com/">Hobbyist</a></td>
+            </tr>
+            <tr>
+              <td>May 2015</td>
+              <td><a href="http://floating-lake-6021.herokuapp.com/">ePlanner</a></td>
+            </tr>
+            <tr>
+              <td>March 2015</td>
+              <td><a href="cheat-sheet.html">SQL Cheatsheet</a></td>
+            </tr>
+            <tr>
+              <td>February 2015</td>
+              <td><a href="http://heycait.github.io/9-gps1-2/gps1-2.html">Pair Programming Website</a></td>
+            </tr>
+          </tbody>
+        </table>
       </section>
 
-      <section id="signature">
-         <p>- Caitlyn</p>
+      <section id="about" class="page-section"><a href="#about"></a>
+        <h1 class="section-title">About</h1>
+        <span class="horizontal-rule"></span>
+          <p>
+            A former student of international affairs and the political economy turned web developer on a journey of self-discovery and growth.
+          </p>
+          <span class="more"><a href="#">You wanna know more?!?! >></a></span>
+      </section>
+
+      <section id="suggestions" class="page-section"><a href="#suggestions"></a>
+        <h1 class="section-title">Suggested Resources</h1>
+        <span class="horizontal-rule"></span>
+
+        <article>
+          <a href="https://www.freecodecamp.com/">freeCodeCamp</a>
+          <p>Learn to code and help nonprofits</p>
+        </article>
+
+        <article>
+          <a href="http://www.theodinproject.com/">The Odin Project</a>
+          <p>Learn web development for free</p>
+        </article>
+
+        <article>
+          <a href="https://medium.com/">Medium</a>
+          <p>
+            A social blogging site where people can publish their ideas and perspectives. Leaders. Artists. Thinkers. And ordinary citizens who have a story to tell. Posts range from scrutinies of world affairs to deeply personal essays. Medium sifts the best of these for you and delivers them directly onto your home page.
+          </p>
+        </article>
       </section>
     </div>
-
-
   </body>
-
-  <footer>
-    &copy <span>Caitlyn</span> 2015
-  </footer>
 </html>
+
+<!-- magazine/blogs:
+https://www.smashingmagazine.com/
+https://news.ycombinator.com/
+https://coderwall.com/
+
+keep up to date:
+https://www.thoughtworks.com/radar/languages-and-frameworks
+
+tutorials:
+https://egghead.io/
+https://www.codeschool.com/
+https://dash.generalassemb.ly/
+https://thinkster.io/angular-rails
+https://www.learneroo.com/
+
+basics:
+https://www.learnenough.com/
+https://www.codecademy.com/
+http://conqueringthecommandline.com/book
+
+comparisons:
+http://hyperpolyglot.org/
+
+algo:
+https://visualgo.net/
+http://bigocheatsheet.com/
+
+self taught CS degree/open courses:
+https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/
+http://www.infoworld.com/article/2614635/application-development/-200k-for-a-computer-science-degree--or-these-free-online-classes-.html
+http://blog.agupieware.com/2014/05/online-learning-bachelors-level.html
+http://www.oeconsortium.org/
+https://www.udacity.com/
+https://www.lynda.com/
+https://www.edx.org/
+https://www.coursera.org/
+https://www.khanacademy.org/
+https://www.udemy.com/courses/ -->
 
